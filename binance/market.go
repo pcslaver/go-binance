@@ -58,7 +58,7 @@ func (b *Binance) GetKlines(q KlineQuery) (klines []Kline, err error) {
 		reqURL = fmt.Sprintf("api/v1/klines?symbol=%s&interval=%s&limit=%d", q.Symbol, q.Interval, q.Limit)
 	}
 
-	_, err = b.client.do("GET", reqUrl, "", false, &klines)
+	_, err = b.client.do("GET", reqURL, "", false, &klines)
 	if err != nil {
 		return
 	}
