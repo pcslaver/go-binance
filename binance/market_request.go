@@ -43,9 +43,11 @@ func (q *SymbolQuery) ValidateSymbolQuery() error {
 
 // Input for: Get /api/v1/klines
 type KlineQuery struct {
-	Symbol   string
-	Interval string
-	Limit    int64
+	Symbol    string
+	Interval  string
+	Limit     int64
+	StartTime int64
+	EndTime   int64
 }
 
 func (q *KlineQuery) ValidateKlineQuery() error {
